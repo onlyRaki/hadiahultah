@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 219, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#judul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  border-bottom: 1px solid #ccc;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Button */
+.button {
+  background-color: #B388EB;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #9c78cb;
+}
+
+/* Pop-up Loading */
+#pop-up-download,
+#download-ready {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#pop-up-download.active,
+#download-ready.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Box isi */
+.loading-box {
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Spinner */
+#spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #B388EB;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+#loading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#text-siap {
+  font-size: 1rem;
+  color: #5c2d91;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+
+  #spinner {
+    width: 35px;
+    height: 35px;
+  }
+
+  #loading {
+    font-size: 0.85rem;
+  }
+
+  .loading-box {
+    padding: 15px 20px;
+  }
+}

