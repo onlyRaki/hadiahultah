@@ -53,7 +53,7 @@ button.addEventListener("click", () => {
     popup.classList.add("active");
     setTimeout(() => {
       popup.classList.remove("active");
-      window.location.href = "../login/login.html";
+      window.location.href = "../../hadiahultah/login/login.html";
     }, 3000);
     return;
   }
